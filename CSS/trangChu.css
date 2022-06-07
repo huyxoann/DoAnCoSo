@@ -160,6 +160,14 @@ ul {
 
 #menu-hidden {
     display: none;
+    width: 70px;
+}
+
+#menu-hidden img {
+    margin: auto;
+    width: 70px;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 
 .content {
