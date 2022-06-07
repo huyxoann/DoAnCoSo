@@ -481,4 +481,8 @@ ul {
         display: block;
         width: 70px;
     }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+    }
 }
