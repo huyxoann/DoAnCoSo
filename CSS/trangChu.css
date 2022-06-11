@@ -175,6 +175,7 @@ ul {
     height: auto;
     background-repeat: no-repeat;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .content .about-us-content {
@@ -459,16 +460,19 @@ ul {
 
 /*Tablet: */
 
-@media(min-width: 425px) and (max-width: 768px) {
-    .button-header {
-        display: none;
+@media(min-width: 425px) and (max-width: 1024px) {
+    .jobs-content {
+        padding-left: 20% !important;
+    }
+    .search-form {
+        flex-direction: column;
     }
 }
 
 
 /*Both */
 
-@media(max-width: 768px) {
+@media(max-width: 1024px) {
     #menu {
         display: none;
     }
@@ -484,6 +488,7 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
+        justify-content: space-between;
     }
     #menu-hidden {
         display: block;
@@ -492,5 +497,38 @@ ul {
     .footer-content {
         display: flex;
         flex-direction: column;
+    }
+    #menuChoose {
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+    }
+    #menuChoose ul {
+        border-radius: 7px;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    #menuChoose ul li {
+        height: 50px;
+        padding: 10px 0 10px 0;
+    }
+    #menuChoose ul li:first-child {
+        margin-top: 20px;
+    }
+    #menuChoose ul li:hover {
+        background-color: #E8F9FD;
+        color: #688adf;
+        transition: all 0.3s ease-in-out;
+    }
+    .buttonHiden {
+        width: 80%;
+        height: 70px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        background-color: #688adf;
+    }
+    .hoso-cv img {
+        display: none;
     }
 }
