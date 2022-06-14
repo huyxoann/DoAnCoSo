@@ -66,3 +66,9 @@ p {
     flex-direction: column;
     justify-content: center;
 }
+
+@media(max-width: 1024px) {
+    #a1 {
+        display: none;
+    }
+}
