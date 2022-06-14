@@ -14,6 +14,15 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script src="popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        function checkInput() {
+            var a = document.getElementById('username').value;
+            var b = document.getElementById('error');
+            if (a == "" || a == null) {
+                b.innerHTML = "Vui lòng nhập tên đăng nhập hoặc mật khẩu";
+            }
+        }
+    </script>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -22,46 +31,49 @@
                 </a>
                 <form>
                     <h2 id="dn" style="padding-top: 25px;">Đăng nhập</h2>
+                    <div><span id="error"></span></div>
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
-                                <label>Tên đăng nhập</label>
-                                <input type="text" required class="form-control" placeholder="Nhập tên đăng nhập của bạn">
+                                <label>Tên đăng nhập </label>
+                                <input id="username" type="text" required class="form-control" placeholder="Nhập tên đăng nhập của bạn">
                             </div>
 
                             <div class="col">
                                 <label>Mật khẩu</label>
-                                <input type="password" required class="form-control" placeholder="Nhập mật khẩu của bạn">
+                                <input id="password" type="password" required class="form-control" placeholder="Nhập mật khẩu của bạn">
                             </div>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <button class="btn btn-success btn-lg" type="submit" id="btnDN" style="margin-left: 250px;">Đăng nhập</button>
-                    </div>
-
-                    <p> Hoặc đăng nhập bằng tài khoản</p>
-
-
-                    <div class="row">
+                    <div id="button">
+                        <div class="form-group nut">
+                            <button onclick="checkInput()" class="btn btn-success btn-lg" type="submit" id="btnDN">Đăng nhập</button>
+                        </div>
+                        <p> Hoặc đăng nhập bằng tài khoản</p>
                         <div class="col-ms-3">
-                            <div class="form-group">
-                                <button class="btn btn-danger btn-lg" type="button" style="margin-left: 258px;">GOOGLE</button>
+                            <div class="form-group nut">
+                                <button class="btn btn-outline-danger btn-lg" type="button">Google</button>
                             </div>
                         </div>
                         <div class="col-ms-3">
-                            <div class="form-group">
-                                <button class="btn btn-primary fb btn-lg" type="button" style="margin-left: 254px;margin-top: 15px;">FaceBook</button>
+                            <div class="form-group nut">
+                                <button class="btn btn-outline-primary fb btn-lg" type="button">Facebook</button>
                             </div>
                         </div>
 
-                        <p>Nếu bạn chưa có tài khoản ?</p>
+                        <p>Nếu bạn chưa có tài khoản?</p>
                         <a style="text-decoration: none;" href="file:///D:/DoAnCoSo/HTML/sign-up.html">
                             <p>Đăng ký ngay</p>
                         </a>
                         <a href="file:///D:/DoAnCoSo/HTML/forget-password.html" style="text-decoration: none;">
                             <p>Quên mật khẩu</p>
                         </a>
+                    </div>
+
+
+
+                    <div class="row">
+
                     </div>
                 </form>
             </div>
