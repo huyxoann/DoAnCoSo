@@ -47,6 +47,7 @@ ul {
 }
 
 .header-content {
+    z-index: 10;
     width: 100%;
     height: auto;
     padding-top: 0px;
