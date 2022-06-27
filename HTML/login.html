@@ -17,9 +17,10 @@
     <script>
         function checkInput() {
             var a = document.getElementById('username').value;
-            var b = document.getElementById('error');
-            if (a == "" || a == null) {
-                b.innerHTML = "Vui lòng nhập tên đăng nhập hoặc mật khẩu";
+            var b = document.getElementById('password').value;
+            var c = document.getElementById('error');
+            if (a == "" || b == "") {
+                c.innerHTML = "Vui lòng nhập tên đăng nhập và mật khẩu";
             }
         }
     </script>

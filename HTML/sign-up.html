@@ -16,6 +16,36 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script src="popper.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        function checkInput() {
+            var a = document.getElementById('firstName').value;
+            var b = document.getElementById('lastName').value;
+            var c = document.getElementById('email').value;
+            var d = document.getElementById('password').value;
+
+            var e1 = document.getElementById('error1');
+            var e2 = document.getElementById('error2');
+            var e3 = document.getElementById('error3');
+            var e4 = document.getElementById('error4');
+            
+            
+            if (a == "") {
+                e1.innerHTML = "*Vui lòng nhập Tên";
+            }
+            if (b == "") {
+                e2.innerHTML = "*Vui lòng nhập Họ";
+            }
+            if (c == "") {
+                e3.innerHTML = "*Vui lòng nhập Email";
+            }
+            if (d == "") {
+                e4.innerHTML = "*Vui lòng nhập Mật khẩu";
+            }
+        }
+
+        
+    
+    </script>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -26,27 +56,31 @@
                     <h2 style="text-align: center;margin: 0 auto;padding-top: 15px;" id="dn">Đăng Ký</h2>
                     <div class="form-group">
                         <div class="form-row">
+                            <div><span id="error1" class="error"></span></div>
                             <div class="col">
-                                <label>Tên</label>
-                                <input type="text " required class="form-control" placeholder="Tên của bạn">
+                                <label>Tên *</label>
+                                <input id="firstName" type="text " required class="form-control" placeholder="Tên của bạn">
                             </div>
+                            <div><span id="error2" class="error"></span></div>
                             <div class="col">
-                                <label>Họ</label>
-                                <input type="text " required class="form-control" placeholder="Họ của bạn">
+                                <label>Họ *</label>
+                                <input id="lastName" type="text " required class="form-control" placeholder="Họ của bạn">
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" required class="form-control" placeholder="Email của bạn">
+                        <div><span id="error3" class="error"></span></div>
+                        <label>Email *</label>
+                        <input id="email" type="email" required class="form-control" placeholder="Email của bạn">
 
                     </div>
 
                     <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" required class="form-control" placeholder="Password của bạn">
-
+                        <div><span id="error4" class="error"></span></div>
+                        <label>Password *</label>
+                        <input id="password" type="password" required class="form-control" placeholder="Password của bạn">
+                        <span class="show-btn"><i class="fas fa-eye"></i></span>
                     </div>
 
                     <div class="form-group">
@@ -75,7 +109,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button class="btn btn-success btn-lg  " type="submit" style="margin-left: 200px; margin-top: 25px; background-color: #2A5DDE;" id="btnDN">Đăng ký ngay</button>
+                        <button onclick="checkInput()" class="btn btn-success btn-lg  " type="submit" style="margin-left: 200px; margin-top: 25px; background-color: #2A5DDE;" id="btnDN">Đăng ký ngay</button>
                     </div>
 
                 </form>

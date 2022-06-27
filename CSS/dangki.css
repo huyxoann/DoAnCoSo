@@ -30,3 +30,7 @@ form div:last-child {
 #a1 {
     width: 100%;
 }
+.error{
+    color: red;
+}
+
